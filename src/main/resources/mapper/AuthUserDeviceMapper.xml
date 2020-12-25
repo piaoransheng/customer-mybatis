@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lhc.web.mapper.AuthUserDeviceMapper">
+
+    <select id="authUserDeviceCount" resultType="int">
+        select count(*) from auth_user_device
+    </select>
+
+    <select id="getDeviceNameById" parameterType='string' resultType="string">
+        select aud_device_name from auth_user_device where aud_id = #{id}
+    </select>
+
+
+</mapper>
